@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 interface CardProps {
   correct_answer: string;
   incorrect_answers: string[];
-  getScore: (score: number) => void;
   nextQuestionClick: () => void;
   question: string;
   question_id: string;
@@ -13,7 +12,6 @@ const Card = ({
   correct_answer,
   incorrect_answers,
   nextQuestionClick,
-  getScore,
   question,
   question_id,
 }: CardProps) => {

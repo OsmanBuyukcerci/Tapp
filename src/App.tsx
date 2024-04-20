@@ -14,7 +14,6 @@ type Question = {
 
 function App() {
   const [category, setCategory] = useState<string>("music");
-  const [score, setScore] = useState<number>(0);
   const [question, setQuestion] = useState<Question>({
     correct_answer: "",
     incorrect_answers: [],
@@ -26,10 +25,6 @@ function App() {
 
   const getCategory = (category: string) => {
     setCategory(category);
-  };
-
-  const getScore = (scr: number) => {
-    setScore(score + scr);
   };
 
   useEffect(() => {
@@ -63,7 +58,6 @@ function App() {
             question_no: question.question_no + 1,
           });
         }}
-        getScore={getScore}
         question={question.question}
         question_id={question.question_id}
       />
